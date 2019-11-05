@@ -1,7 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+import Display from "./components/DisplayComponents/Display"
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers"
-import NumberButton from "./components/ButtonComponents/NumberButtons/NumberButton"
+import Operators from "./components/ButtonComponents/OperatorButtons/Operators"
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials"
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -19,7 +21,17 @@ function App() {
     <div className="container">
       <Logo />
       <div className="App">
-        <Numbers />
+        {/* <Operators /> */}
+        <Display />
+        <div className="buttons">
+          <div>
+            <Specials />
+            <div className="numbers">
+              <Numbers />
+            </div>
+          </div>
+          <Operators />
+        </div>
       </div>
     </div>
   );
